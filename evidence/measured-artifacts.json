@@ -1,0 +1,148 @@
+{
+  "schemaVersion": "civicos-measured-artifacts-v1",
+  "inspectedAt": "2026-09-27",
+  "scope": "Hashes and sizes of the retained release-candidate artifacts associated with the reported measurements. These are not finalized replacement-ceremony artifacts.",
+  "fieldDefinitions": {
+    "sha256": "Lowercase SHA-256 of the complete file bytes, recomputed from the retained local file. This is not a domain-separated canonical-JSON manifest or transcript hash.",
+    "bytes": "Exact file length in bytes at inspection.",
+    "filename": "Artifact basename; no private source directory is disclosed.",
+    "bundled": "Whether the complete artifact is distributed in this reference package.",
+    "checks": "Results of the dated artifact inspection, not additional experimental participants, proof trials, or polls."
+  },
+  "setup": {
+    "profile": "internal-rc",
+    "contributionCount": 1,
+    "finalMultiContributorSetup": false,
+    "publicRandomnessRecorded": false,
+    "description": "The retained vote and tally manifests describe an internal, single-contributor release-candidate setup for devnet/internal testing. Their setup metadata records no public-randomness finalization."
+  },
+  "circuits": [
+    {
+      "kind": "vote",
+      "circuitId": "civicos-groth16-vote-circuit-v1",
+      "parameters": {
+        "credentialMerkleDepth": 32,
+        "maxOptions": 8
+      },
+      "artifacts": [
+        {
+          "role": "verification_key",
+          "filename": "credential_commitment_vote.vkey.json",
+          "sha256": "edbb91b2e0bf49013ac3c4e214c1101d0b85724c5e818ef53c7e8175a268ec46",
+          "bytes": 4397,
+          "bundled": false
+        },
+        {
+          "role": "proving_key",
+          "filename": "credential_commitment_vote_final.zkey",
+          "sha256": "8572dacceacee6c43173c0a19f6fb20b3479ca74ba23aa0e0e837e3bd2a6d1a7",
+          "bytes": 9147086,
+          "bundled": false
+        },
+        {
+          "role": "witness_wasm",
+          "filename": "credential_commitment_vote.wasm",
+          "sha256": "36274d4c52fa38ad1ae3aa4ed46a81d0f468644cd0ac1e6ab529b13bc6012d51",
+          "bytes": 2922839,
+          "bundled": false
+        },
+        {
+          "role": "r1cs",
+          "filename": "credential_commitment_vote.r1cs",
+          "sha256": "13446048bae1a21493fa825c85c6d742dd20897539db39fbf8b7bccaa4154e4f",
+          "bytes": 2625920,
+          "bundled": false
+        },
+        {
+          "role": "phase2_metadata",
+          "filename": "credential_commitment_vote.phase2-transcript.json",
+          "sha256": "4fcb42aa366b389e8db8d8222974f62bba63d718ee30263a159aeb50334908c7",
+          "bytes": 1916,
+          "bundled": false
+        }
+      ]
+    },
+    {
+      "kind": "tally",
+      "circuitId": "civicos-groth16-tally-circuit-v1",
+      "parameters": {
+        "tallyBatchSize": 64,
+        "maxOptions": 8
+      },
+      "artifacts": [
+        {
+          "role": "verification_key",
+          "filename": "encrypted_choice_tally.vkey.json",
+          "sha256": "d1caee54892e1b522f63ce45c939b8e146987d429c728447e897f5cd7d68a731",
+          "bytes": 4573,
+          "bundled": false
+        },
+        {
+          "role": "proving_key",
+          "filename": "encrypted_choice_tally_final.zkey",
+          "sha256": "8804c71c7470a9def6a4f836a5ce8b2888ea4481a389f7d455b78862d3063215",
+          "bytes": 139669342,
+          "bundled": false
+        },
+        {
+          "role": "witness_wasm",
+          "filename": "encrypted_choice_tally.wasm",
+          "sha256": "37615f37e35b38bc7ec2712de229baf48390835007b94b55f4f4b44d9680ea12",
+          "bytes": 4801512,
+          "bundled": false
+        },
+        {
+          "role": "r1cs",
+          "filename": "encrypted_choice_tally.r1cs",
+          "sha256": "0366592433b95361f063c43622df1d631ced90d1dcd2c35c16d9374b30ffcf10",
+          "bytes": 40205428,
+          "bundled": false
+        },
+        {
+          "role": "phase2_metadata",
+          "filename": "encrypted_choice_tally.phase2-transcript.json",
+          "sha256": "65073dc8d92b8ef071ac9dfbce9023a6df6e591439a3445607ae9082cbd9934b",
+          "bytes": 1880,
+          "bundled": false
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "manifestArtifactFilesChecked": 10,
+    "manifestArtifactHashesMatched": 10,
+    "mobileVoteProvingKeyMatches": true,
+    "mobileVoteWasmMatches": true
+  },
+  "laterContributionVerification": {
+    "checkedAt": "2026-09-27",
+    "tool": "snarkjs",
+    "toolVersion": "0.7.6",
+    "operation": "zkey verify",
+    "scope": "Separate read-only checks of the retained round-three replacement contribution outputs against their corresponding R1CS and public powers-of-tau files. These outputs were not the keys used for the reported measurements.",
+    "verificationLogBundled": false,
+    "results": [
+      {
+        "kind": "vote",
+        "filename": "credential_commitment_vote_0003.zkey",
+        "sha256": "80d9d3d973ad71779239c1bf5d95de07eaf4a07f40879cdab2f147f6c6359f2c",
+        "result": "passed",
+        "exitCode": 0
+      },
+      {
+        "kind": "tally",
+        "filename": "encrypted_choice_tally_0003.zkey",
+        "sha256": "28283e3033a12c70bf022dc23e8cf9dfa97736b25d0a1ff6102df59a3496c515",
+        "result": "passed",
+        "exitCode": 0
+      }
+    ],
+    "limitations": "These checks do not establish contributor independence, secure erasure of secret randomness, public-randomness finalization, deployment, or independent review. The checked artifacts and full verification output are not bundled."
+  },
+  "limitations": [
+    "These hashes identify retained files; they do not establish circuit correctness, honest setup, secure erasure of setup randomness, or the provenance of a deployed service.",
+    "The underlying files are not bundled, so reviewers cannot recompute these artifact hashes or run their proof checks from this package alone.",
+    "Later contribution outputs are separate from the artifacts used for the reported measurements. Their existence does not establish a finalized or deployed replacement setup.",
+    "The later contribution records do not establish three independent contribution groups."
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "civicos-public-article-evidence-v1",
+  "referenceDate": "2026-09-02",
+  "software": {
+    "mobileMarketingVersion": "0.0.892",
+    "publishedBaselineBuild": 89211,
+    "experimentBuild": 89212,
+    "experimentMobileCommit": "19e813a834e00458c967098c8230f95a1468e21f",
+    "backendVersion": "0.0.87",
+    "architectureBackendCommit": "cc3658d05229c34cc74c48f186206c3bcc7395f8",
+    "evidenceBackendRevision": "392c779"
+  },
+  "primaryMobileCohort": {
+    "platform": "iOS",
+    "device": "iPhone 15 Pro",
+    "hardwareIdentifier": "iPhone16,1",
+    "build": 89212,
+    "cohort": "measured_warm",
+    "completed": 50,
+    "attempted": 50,
+    "witnessMs": {
+      "p50": 101,
+      "p95NearestRank": 102
+    },
+    "proveMs": {
+      "mean": 306.94,
+      "sampleStandardDeviation": 7.095,
+      "p50": 304,
+      "p95NearestRank": 321,
+      "minimum": 301,
+      "maximum": 341
+    },
+    "totalMs": {
+      "mean": 408.8,
+      "sampleStandardDeviation": 7.669,
+      "p50": 406,
+      "p95NearestRank": 422,
+      "minimum": 403,
+      "maximum": 450
+    },
+    "peakResidentMiB": {
+      "median": 338.766,
+      "p95NearestRank": 386.578,
+      "maximum": 395.609
+    },
+    "peakPhysicalFootprintMiB": {
+      "median": 204.923,
+      "p95NearestRank": 208.908,
+      "maximum": 214.876
+    },
+    "sessionProofVerification": {
+      "accepted": 61,
+      "examined": 61,
+      "proofHashMatches": 61
+    },
+    "sourceSha256": "cba774994e2f438f33b220e948c4caf57f55ac9d06d710c8966f9deb4c2eab29",
+    "limits": [
+      "one iPhone model",
+      "measured-warm cohort only",
+      "in-process peak sampler rather than an external profiler",
+      "battery range differed from the registered range"
+    ]
+  },
+  "legacyAndroidCohorts": [
+    {
+      "device": "Samsung S7 edge",
+      "build": 88606,
+      "completed": 5,
+      "proveMsMean": 1295.8,
+      "proveMsP50": 1280,
+      "proveMsP95NearestRank": 1369,
+      "memoryAfterProofMbRange": [509, 516]
+    },
+    {
+      "device": "Samsung S7 edge",
+      "build": 88606,
+      "completed": 6,
+      "proveMsMean": 1289.8,
+      "proveMsP50": 1277.5,
+      "proveMsP95NearestRank": 1372,
+      "memoryAfterProofMb": 581
+    }
+  ],
+  "legacyAndroidFunctionalObservation": {
+    "device": "Samsung S7 edge",
+    "registrationCompleted": true,
+    "proofGenerationCompleted": true,
+    "encryptedVoteSubmissionCompleted": true,
+    "receiptRetrievalCompleted": true,
+    "evidenceClass": "author_confirmed_functional_observation",
+    "limits": [
+      "no privacy-safe session export retained",
+      "no stage-level timings retained",
+      "build and operating-system metadata not retained for this observation"
+    ]
+  },
+  "historicalFourPollCohort": {
+    "expectedPolls": 4,
+    "examinedPolls": 4,
+    "qualifiedPolls": 4,
+    "qualificationGatePassed": true,
+    "acceptedVerifiedEncryptedVotes": 4,
+    "uniqueNullifiers": 4,
+    "verifiedTallies": 4,
+    "rootPublications": 4,
+    "finalResultPublications": 4,
+    "publicAuditVerifierPasses": 4,
+    "solanaTransactions": {
+      "cluster": "devnet",
+      "programId": "FsXuodQtkWjE1EZEAUskvRuj4bGMrKZAHAEf4WEk4oRo",
+      "examined": 8,
+      "found": 8,
+      "finalized": 8,
+      "succeeded": 8,
+      "programReferenced": 8,
+      "programInvoked": 8
+    },
+    "summarySha256": "f7af07948b53259a1bdab967e22aca63ede527541fbc06841da49b884499b577",
+    "solanaChecksSha256": "ccde02aaf28c638280e8059805cc28d839f4e75900278baa4a528eb20e83ba36"
+  },
+  "prospectiveFunctionalRun": {
+    "mobileBackendRunIdJoin": "pass",
+    "uniqueDatabaseAcceptanceWithinBackendSpan": true,
+    "databaseAcceptanceOffsetFromServerStartMs": 168,
+    "acceptedVerifiedEncryptedVotes": 1,
+    "successfulReceiptInclusionChecks": 2,
+    "verifiedTallies": 1,
+    "rootPublications": 1,
+    "finalResultPublications": 1,
+    "finalizedSuccessfulSolanaTransactions": 2,
+    "mobileWorkflowMs": 3633.516,
+    "backendSpanMs": 1376.616,
+    "proofGenerationMs": 319.401,
+    "backendProofVerificationMs": 784.104,
+    "requestBodyUtf8Bytes": 4195,
+    "responseBodyUtf8Bytes": 560,
+    "proofEnvelopeUtf8Bytes": 2319,
+    "encryptedVoteEnvelopeUtf8Bytes": 1272,
+    "functionalGatePassed": true,
+    "latencyCohortPassed": false,
+    "payloadDistributionGatePassed": false,
+    "limits": [
+      "one observation",
+      "session retained the proof_offline profile label",
+      "database linkage uses a unique acceptance timestamp within the exact backend span rather than a public database row identifier"
+    ],
+    "mobileSessionSha256": "b176b97711def7397cade5a7fbf6d7ec738efd44d0b0efc7515635a85a5fc50b",
+    "serverSpanSha256": "1fd656e1bfef79f19e898363b10f7d87c7893e552a5f4ba4750f6806815f82ef",
+    "joinedSummarySha256": "89217ebee7676af3f6058d7f1ec4b3d3f90528e9786b41969d21f5ea36d634a1"
+  },
+  "circuitArtifacts": {
+    "proofSystem": "Groth16",
+    "curve": "BN254",
+    "voteCircuitConstraints": 19483,
+    "voteCircuitPublicInputs": 9,
+    "voteProvingKeyBytes": 9147086,
+    "voteWitnessWasmBytes": 2922839,
+    "voteVerificationKeyBytes": 4397,
+    "setupStatus": "internal_one_contributor_release_candidate"
+  }
+}

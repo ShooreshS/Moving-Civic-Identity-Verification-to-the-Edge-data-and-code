@@ -1,0 +1,13 @@
+{
+  "name": "civicos-article-reference-package",
+  "version": "1.0.0",
+  "license": "(MIT AND CC-BY-4.0)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test scripts/verify-manifest.test.mjs scripts/public-examples.test.mjs && node scripts/verify-reference-package.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

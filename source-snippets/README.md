@@ -1,0 +1,12 @@
+# Source excerpts
+
+These two adapted excerpts explain how application byte counts and backend timing spans were collected. Use them alongside [the results summary](../evidence/evidence-summary.json) and [measurement methods](../methods/measurement-methods.md). They are publication examples, not byte-for-byte copies of the private source revisions.
+
+- [mobile-payload-measurement.js](mobile-payload-measurement.js) counts UTF-8 bytes in the serialized request and selected nested values. It measures the response by serializing the parsed JSON again, so the count excludes HTTP and TLS framing and need not equal the original response-body representation. It shows run-ID propagation with the public header alias `X-Review-Run`.
+- [backend-timing-span.ts](backend-timing-span.ts) measures operations with `performance.now()`, restricts stage names to an allow-list, and records durations and outcomes. It shows the span's run-ID field without exposing the underlying service operations.
+
+The backend excerpt uses `review-server-span-v1` and `participation_service` as public schema/workflow labels. The header and diagnostic-label substitutions do not enter the serialized request/response body counts or change the timing operations. Stage names, the experiment label, and measured payload paths remain unchanged. In particular, the keys under `privacy.proof`, plus `encryptedVote` and `voteCommitment`, retain the measured payload schema.
+
+The snippets omit endpoint construction, authentication, account lookup, database credentials, request bodies, response bodies, deployment configuration, and key material. They depend on surrounding code and are not standalone programs or a buildable application. The backend excerpt also calls helpers whose implementations are not included. [Example regression tests](../scripts/public-examples.test.mjs) supply synthetic inputs to check byte-count behavior and inspect the SQL helper's publication boundaries. These tests do not recreate the measured sessions.
+
+The `software` object in the results summary records the mobile and backend revision identifiers associated with the evidence. Those identifiers document provenance; the corresponding complete source revisions are not bundled in this repository. `MANIFEST.sha256` covers the adapted excerpts distributed here; hashes of retained experiment records refer to the original records. The excerpts do not establish the privacy or security of omitted code, and no independent security-audit report is included.

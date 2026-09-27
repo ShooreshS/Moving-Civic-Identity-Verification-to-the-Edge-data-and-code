@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Cite the release-specific archive DOI when available; otherwise cite this repository and the exact Git commit reviewed."
+title: "CivicOS reference implementation excerpts and article evidence package"
+type: software
+version: 1.0.0
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - family-names: Sufiye
+    given-names: Shooresh
+repository-code: "https://github.com/ShooreshS/Moving-Civic-Identity-Verification-to-the-Edge-data-and-code"
+url: "https://github.com/ShooreshS/Moving-Civic-Identity-Verification-to-the-Edge-data-and-code"
+abstract: "Aggregate experiment evidence, measurement methods, public devnet identifiers, measured artifact hashes, and limited source excerpts for Moving Civic Identity Verification to the Edge: A Privacy-Preserving Architecture for One-Person-One-Participation Digital Polling. Raw experimental records, artifact binaries, and a finalized multi-contributor setup are not included."
+keywords:
+  - civic technology
+  - mobile computing
+  - zero-knowledge proofs
+  - reproducibility
+  - Solana devnet
