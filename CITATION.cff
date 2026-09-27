@@ -1,4 +1,5 @@
-cff-version: 1.2.0
+cff-version: 1.0.0
+doi: "10.5281/zenodo.23000023"
 message: "Cite the release-specific archive DOI when available; otherwise cite this repository and the exact Git commit reviewed."
 title: "CivicOS reference implementation excerpts and article evidence package"
 type: software
