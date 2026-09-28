@@ -175,9 +175,9 @@ scan(inspection);
 
 const metadata = readJson("package.json");
 const citation = readFileSync(resolve(root, "CITATION.cff"), "utf8");
-assert(metadata.version === "1.1.0-dev", "Working supplement must remain distinguished from archived v1.0.0.");
-assert(/^cff-version: 1\.2\.0$/m.test(citation) && /^version: 1\.1\.0-dev$/m.test(citation), "Citation format or package version mismatch.");
-assert(!/^doi:/m.test(citation), "Unarchived supplement must not claim the baseline's DOI as its own.");
+assert(metadata.version === "1.1.0", "Evidence-package release version must be 1.1.0.");
+assert(/^cff-version: 1\.2\.0$/m.test(citation) && /^version: 1\.1\.0$/m.test(citation), "Citation format or package version mismatch.");
+assert(/^doi: "10\.5281\/zenodo\.23014830"$/m.test(citation), "Version 1.1.0 archive DOI missing or incorrect.");
 assert(/^    doi: "10\.5281\/zenodo\.23000023"$/m.test(citation), "Archived baseline reference missing from citation metadata.");
 
 console.log(`Package integrity passed: ${integrity.fileCount} files match MANIFEST.sha256.`);

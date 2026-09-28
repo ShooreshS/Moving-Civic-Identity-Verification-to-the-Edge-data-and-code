@@ -6,7 +6,7 @@ const scan = (value, file = "example.txt") => inspectText(file, value);
 const url = (host, path = "/") => ["https:", "", host, path.slice(1)].join("/");
 
 test("publication scan accepts known public references and ordinary source hashes", () => {
-  const text = [url("github.com", "/example/research"), url("doi.org", "/10.5281/zenodo.23000023"), "a".repeat(64), "SYNTHETIC-REVIEW-KEY-ONLY"].join("\n");
+  const text = [url("github.com", "/example/research"), url("doi.org", "/10.5281/zenodo.23014830"), url("zenodo.org", "/records/23014830"), url("doi.org", "/10.5281/zenodo.23000023"), "a".repeat(64), "SYNTHETIC-REVIEW-KEY-ONLY"].join("\n");
   assert.deepEqual(scan(text), []);
 });
 

@@ -1,6 +1,6 @@
 # Claim-to-evidence map
 
-Unless another file is named, field paths below refer to [evidence-summary.json](../evidence/evidence-summary.json). The last column states what a reviewer can check using this package. Experimental summaries remain separate from the source-derived descriptions added on 2026-09-28. Those additions are outside the archived v1.0.0 DOI; see [archive status](archive-status.md).
+Unless another file is named, field paths below refer to [evidence-summary.json](../evidence/evidence-summary.json). The last column states what a reviewer can check using this package. Experimental summaries remain separate from the source-derived descriptions added on 2026-09-28. Those additions are included in version 1.1.0, DOI [`10.5281/zenodo.23014830`](https://zenodo.org/records/23014830), and are outside the earlier v1.0.0 archive; see [archive status](archive-status.md).
 
 | Article claim | Public package field | Reported evidence class | Review use and limit |
 |---|---|---|---|

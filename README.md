@@ -4,7 +4,7 @@ This repository accompanies *Moving Civic Identity Verification to the Edge: A P
 
 The package supports inspection of the paper's reported evidence. It does not contain the full application, individual trial records, retained proof inputs, or a complete experiment-reproduction environment. The measured setup is a one-contributor release candidate. A finalized multi-contributor transcript, consented contributor attestations, and final public-randomness provenance are not included; see [setup evidence](methods/setup-evidence.md).
 
-This is an unarchived working supplement (`1.1.0-dev`). DOI `10.5281/zenodo.23000023` identifies the published `1.0.0` baseline, which does not contain these added implementation descriptions. See [archive status](methods/archive-status.md) before matching this package to manuscript reference [32].
+This is version `1.1.0`, with Zenodo DOI [`10.5281/zenodo.23014830`](https://zenodo.org/records/23014830). The earlier DOI `10.5281/zenodo.23000023` identifies the published `1.0.0` baseline, which does not contain the added implementation descriptions. See [archive status](methods/archive-status.md) when matching this package to the manuscript's evidence-package reference.
 
 The SQL example and selected diagnostic labels in the source excerpts use public aliases. Experimental results and their verification identifiers are unchanged. The [naming notes](methods/measurement-methods.md#public-names-and-evidence-identifiers) explain what was adapted and what remains exact.
 
@@ -78,6 +78,6 @@ The package does not include ciphertexts, private database rows, or the prospect
 
 ## Citation and reuse
 
-[CITATION.cff](CITATION.cff) describes this working supplement and credits the [archived v1.0.0 baseline](https://zenodo.org/records/23000023). A reviewer using the supplement should identify its exact Git commit with the [repository URL](https://github.com/ShooreshS/Moving-Civic-Identity-Verification-to-the-Edge-data-and-code), or its own version-specific DOI once archived. The baseline DOI does not cover the additions. Neither version should be described as a finalized ceremony archive.
+[CITATION.cff](CITATION.cff) describes version `1.1.0`. Cite this version using DOI [`10.5281/zenodo.23014830`](https://zenodo.org/records/23014830); the file also credits the [archived v1.0.0 baseline](https://zenodo.org/records/23000023). When reviewing a later modified checkout, also identify its exact Git commit with the [repository URL](https://github.com/ShooreshS/Moving-Civic-Identity-Verification-to-the-Edge-data-and-code). The baseline DOI does not cover the additions in version `1.1.0`. Neither version should be described as a finalized ceremony archive.
 
 Code is released under MIT; data and documentation are released under CC BY 4.0. See [license scope](LICENSE.md) for the file-level distinction, attribution, and third-party exclusions. These licenses do not cover the full CivicOS application or private records.

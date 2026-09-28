@@ -2,7 +2,7 @@
 
 This package is intended for assessment of the paper's architecture and reported feasibility observations. It does not offer full experimental reproduction. The implementation descriptions were prepared from selected source revisions on 28 September 2026. They let a reviewer examine the stated logic and its limits without a deployed application, private database, or participant records.
 
-The added descriptions are an unarchived working supplement. DOI `10.5281/zenodo.23000023` identifies the earlier version 1.0.0; it does not identify these additions. See [archive status](methods/archive-status.md).
+The added descriptions are included in version 1.1.0, with Zenodo DOI [`10.5281/zenodo.23014830`](https://zenodo.org/records/23014830). DOI `10.5281/zenodo.23000023` identifies the earlier version 1.0.0; it does not identify these additions. See [archive status](methods/archive-status.md).
 
 ## A reading route
 
