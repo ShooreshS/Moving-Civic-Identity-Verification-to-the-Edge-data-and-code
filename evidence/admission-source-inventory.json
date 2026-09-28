@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "civicos-source-inspection-v1",
+  "inspectionDate": "2026-09-28",
+  "sourceFilesBundled": false,
+  "revisions": {
+    "backend": "392c779cc1122fa5f734520966a47e27b7495236"
+  },
+  "comparisonRevisions": {
+    "backendArchitecture": "cc3658d05229c34cc74c48f186206c3bcc7395f8",
+    "backendHead": "985e11c9314cc45d072f2c3802b338c3b4189388"
+  },
+  "scope": "Source identification for the accompanying source-derived admission summary only. The private source files are not bundled, so these hashes do not make the implementation independently auditable or prove deployed behavior.",
+  "fieldDefinitions": {
+    "bytes": "Length in bytes of the raw source file at revision.",
+    "sha256": "SHA-256 of the raw source file at revision; not a transformed or redacted file.",
+    "workingTreeMatch": "Whether the inspected working-tree file was byte-identical to this revision's source file on the inspection date.",
+    "architectureRevisionMatch": "Whether the source file was byte-identical at comparisonRevisions.backendArchitecture.",
+    "headRevisionMatch": "Whether the source file was byte-identical at comparisonRevisions.backendHead.",
+    "kind": "Test source is classified as test; runtime source, configuration definitions, and database-constraint definitions are classified as implementation."
+  },
+  "files": [
+    {
+      "alias": "ATTESTATION",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 55787,
+      "sha256": "9f8a22f60e8f6e946d37abc191517e00bce9cffc025e3e608f923726b00f0b19",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "AUTH_FLOW",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 31686,
+      "sha256": "1d7afe42f02ddff71f09283305bece56db2a102f59b30aa4dfd93fd9d22aba46",
+      "workingTreeMatch": false,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": false
+    },
+    {
+      "alias": "AUTH_ROUTES",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 12861,
+      "sha256": "e7525c57db6757df90e00e1c14ee0128b67d773e4c577d722deafb43c2b2f2f1",
+      "workingTreeMatch": false,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": false
+    },
+    {
+      "alias": "ADMISSION_EVIDENCE_SHAPE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 614,
+      "sha256": "619f1bbe2be80146d3239d8bed7bb9c9380e2a39ddded04dd6963cfbf9be80ec",
+      "workingTreeMatch": false,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": false
+    },
+    {
+      "alias": "SESSION_GUARD",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 6351,
+      "sha256": "a674776831303f563b29e4a1328064ce28f41218dc9311943595b45caf139b0e",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "AUTH_POLICY",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 1831,
+      "sha256": "35f5d70631b977761d22f799027c517d2133123f0988e5b30681017b45245ba8",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "AUTH_CONFIG",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 55170,
+      "sha256": "9bb6680545cb3bc79e5067ddd32f3d9f180272367c7748f0c70001907b301b30",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "DEVICE_SIGNATURE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 5320,
+      "sha256": "6527353dce3d0ea3678b2c3de2d3c279ba4ff63a4090525c70aba423f3219f9e",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "CHALLENGE_PAYLOAD",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 1018,
+      "sha256": "bcd590913b49f76a5298dbbedceb02bef28c391fdc0d590fa7a76123a182b6f8",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "TOKEN_HASHING",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 766,
+      "sha256": "285e5012d400f5cbc4c072c86dd8eef75de1df982696e364eeaf4699b601b420",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "CHALLENGE_STORE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 1850,
+      "sha256": "63c573e60e9ad7ca85aa57f7c7f6b7654484c3ab9f0353c4ff89b34943a7b3b6",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "ATTESTATION_STORE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 5199,
+      "sha256": "627c30f8f10c65a0ad93c3eb1d859993c939e629173fc8cd75c7db75eeb2548f",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "IDENTITY_DERIVATION",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 1566,
+      "sha256": "4268507cd7576af5c46f5c4079a6e1058c19a8b367bf2d196033250e63310e35",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "ACCOUNT_RESOLUTION",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 3521,
+      "sha256": "7ccaece240f3b10878a55692dc5135a168fd9b034b022e82bc4fef53188b07a3",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "IDENTITY_BINDING",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 8879,
+      "sha256": "de12440e93da9752bc6dd0075328eae78fe19e02f56558a1868f835ca3063332",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "IDENTITY_ROUTE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 17803,
+      "sha256": "5e26a90f4903472ba4873f782bf6d1ba131f9166b169eb077ba2de3005d140ff",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "IDENTITY_STORE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 1869,
+      "sha256": "94ccbf495dfacd685cad628608a9e8d1ebe12713ec2aad47ffbf542e7b04861d",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "IDENTITY_RULES",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 1023,
+      "sha256": "3723e1cb4eb113a94c6e635a93c7e44500331d179f79d8f366a6a5d0dd60bb54",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "CREDENTIAL_ISSUANCE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 9807,
+      "sha256": "f99988c503b24bdc870e988c998fc870398519b5ab95587bde3219db4c249157",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "CREDENTIAL_ROUTE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 6358,
+      "sha256": "3d28785a6bef8093ad6a155c1127b8684fcbc67bc97d0cc5e0e4f521c773a71a",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "REGISTRY",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 13253,
+      "sha256": "31a7b90119cbc0af92d116785e2128fd398d2bbef843c789de002d1cdeb74252",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "REGISTRY_STORE",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 8499,
+      "sha256": "4bc7cf90cdfa3b87dd5f763223c409df536aa4e7c5e002f049fab69cad7bfc84",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "REGISTRY_PARAMETERS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 155,
+      "sha256": "d85f6a1ccdc73bf98ded5d0c1b945b9f5c322a1f19ce07725f9cd99af52f9f2d",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "REGISTRY_RULES",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 4457,
+      "sha256": "87a0a7a833c054d7c6379034f874309f447a9c6e028f2a6c2884d0a2945ffca8",
+      "workingTreeMatch": true,
+      "kind": "implementation",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "DEVICE_SIGNATURE_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 2826,
+      "sha256": "353e6aa568eac3ec8da2fd3331dd54459871c2c2b29b835120bb4e49decacbe3",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "ATTESTATION_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 18155,
+      "sha256": "e30b3d898a69cdee36afb4b568b92fbb61043e44ca0b74a65bd0b1b1475d654c",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "SESSION_GUARD_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 12551,
+      "sha256": "e1b4db4c7cb6dd79a273f22a41395643a280ae96b463a358387ea910603d4b8e",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "AUTH_LIFECYCLE_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 20854,
+      "sha256": "6637a0e28b86a087d24fad4cff2fd304149f284ec2e324094565c3148afd8cb7",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "IDENTITY_DERIVATION_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 1223,
+      "sha256": "6110d2497ca533cc61d42509505d301a9305239d0f6fc30e3e5a945459d0c8c2",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "IDENTITY_BINDING_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 9688,
+      "sha256": "4d99b4281941e6fddcbd3c3ce1f5e50c278b4e27f1520a241938e08746acf5ce",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "CREDENTIAL_ISSUANCE_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 6348,
+      "sha256": "ed3f7dba993fb3de83e2ce2fd7b00e6b11009345d893f16501ff2cb19bd39cc8",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    },
+    {
+      "alias": "REGISTRY_TESTS",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 10350,
+      "sha256": "5992a11dfb5f7d612019dbd8b0b773299f72ff1b13af17f102072a5af62d396f",
+      "workingTreeMatch": true,
+      "kind": "test",
+      "architectureRevisionMatch": true,
+      "headRevisionMatch": true
+    }
+  ]
+}

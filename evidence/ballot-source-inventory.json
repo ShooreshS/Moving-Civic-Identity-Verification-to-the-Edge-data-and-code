@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "civicos-source-inspection-v1",
+  "inspectionDate": "2026-09-28",
+  "sourceFilesBundled": false,
+  "revisions": {
+    "backend": "392c779cc1122fa5f734520966a47e27b7495236",
+    "architectureBackend": "cc3658d05229c34cc74c48f186206c3bcc7395f8",
+    "inspectedBackendHead": "985e11c9314cc45d072f2c3802b338c3b4189388"
+  },
+  "scope": "Selected backend ballot admission, schema, receipt and audit, tally, key-custody, output projections, and associated test source.",
+  "revisionRelationship": "Architecture revision is an ancestor of the measured revision, which is an ancestor of the inspected backend HEAD.",
+  "hashAlgorithm": "SHA-256",
+  "hashScope": "Exact source-file bytes at the measured backend revision; no content normalization.",
+  "testExecution": "Selected test source was inspected; these private implementation suites were not executed for this inventory.",
+  "limits": [
+    "This inventory identifies inspected source; it does not contain that source or independently verify its behavior.",
+    "Aliases intentionally omit operational source paths, schema names, service addresses, and deployment settings.",
+    "Matching a source hash requires independent access to the corresponding source file.",
+    "Source alignment does not establish deployed configuration, applied database constraints, experiment execution, concurrency safety, or chain publication.",
+    "Synthetic review-package checks are separate from the implementation test source identified here."
+  ],
+  "files": [
+    {
+      "alias": "REQUEST_BOUNDARY",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 31725,
+      "sha256": "9124cb81e6e351c30da775f008fc7dc7f77f204bfec52ddba54df01e17170dbc",
+      "alignment": { "architectureRevision": "changed", "inspectedWorkingTree": "identical" },
+      "changeSummary": "Experiment timing and result instrumentation added around the existing request path."
+    },
+    {
+      "alias": "BALLOT_ADMISSION",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 49082,
+      "sha256": "e00845cc2d38c88be1a070ad369cc495601e3fd1a1957d36b836836e5a729cbc",
+      "alignment": { "architectureRevision": "changed", "inspectedWorkingTree": "identical" },
+      "changeSummary": "Experiment span wrappers added around admission, persistence, audit, and receipt operations."
+    },
+    {
+      "alias": "BALLOT_LEDGER",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 5051,
+      "sha256": "a3c25dc92c28560939c25e03b63f9b714b51a33b660a8a72b968d78f445ec825",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "BALLOT_SCHEMA",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 5162,
+      "sha256": "811c3caab05b5ad95c186f510c0990780f35ca187006662cd0f09c570baac670",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "OPENING_BINDING_SCHEMA",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 958,
+      "sha256": "23d1ffb088d3c189f8c3c9ae9700ffbff871b512515b1917250e62beb9e79c9f",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "PUBLIC_AUDIT",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 58058,
+      "sha256": "4e9b53fd5f2cc1ac74b43bed76b36da1c9a373bbbc3672b649673d9f5a09f471",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "TALLY_OPENING",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 15091,
+      "sha256": "a20adf0d82bc37a1a68d5dae7192f14471f36ca9953aa18b47efcf2073e4778a",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "KEY_LIFECYCLE",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 11087,
+      "sha256": "797c0ae772d2bee3ef4546652773242cdd8e75300e02299f8895343989d074a3",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "KEY_STORE",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 2603,
+      "sha256": "93c2aae21b8ee63512421baa0ba4100e2a2ea85ee32d87e9000e7b1a91e0a6d3",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "CUSTODY_POLICY",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 5427,
+      "sha256": "d40009b5835d448a8130da48831b4b1924e0693c60ab4fd3a5be9932d66d1925",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "AUDIT_APPEND",
+      "repository": "backend",
+      "kind": "implementation",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 14937,
+      "sha256": "cb76a6ea49d25c2db799c8bfcd0cd4f25f2eb26642426aafe185a60875050cf0",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "ADMISSION_TESTS",
+      "repository": "backend",
+      "kind": "test",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 51630,
+      "sha256": "194cd5c551dad637b93550c1bf313938d4256c2671da8853134863a1b108711b",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "PUBLIC_AUDIT_TESTS",
+      "repository": "backend",
+      "kind": "test",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 23115,
+      "sha256": "bb944b98f77393c5830eda38a1eea9f752f7e1ea166386f55e1dda3a78eb89e6",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "RESULT_READ_TESTS",
+      "repository": "backend",
+      "kind": "test",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 16916,
+      "sha256": "6585d4080fa0bc4637744ebd45a3fb82a0d519477cfb22e62709d74ad0d610b9",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "TALLY_OPENING_TESTS",
+      "repository": "backend",
+      "kind": "test",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 11963,
+      "sha256": "414e025683c94ca2ebe699f96f42a828618b38505655e6751bfa1d7e25675e1e",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    },
+    {
+      "alias": "KEY_LIFECYCLE_TESTS",
+      "repository": "backend",
+      "kind": "test",
+      "workingTreeMatch": true,
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 7536,
+      "sha256": "1f8335c40b2521dbeddb4221c360454458615866c80581c3452b28af2dbd2498",
+      "alignment": { "architectureRevision": "identical", "inspectedWorkingTree": "identical" }
+    }
+  ]
+}

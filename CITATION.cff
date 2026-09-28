@@ -1,9 +1,8 @@
-cff-version: 1.0.0
-doi: "10.5281/zenodo.23000023"
-message: "Cite the release-specific archive DOI when available; otherwise cite this repository and the exact Git commit reviewed."
+cff-version: 1.2.0
+message: "This working supplement is not archived. Cite its exact Git commit if reviewing it. The reference below identifies the archived v1.0.0 baseline and does not cover the supplement."
 title: "CivicOS reference implementation excerpts and article evidence package"
 type: software
-version: 1.0.0
+version: 1.1.0-dev
 license:
   - MIT
   - CC-BY-4.0
@@ -12,10 +11,19 @@ authors:
     given-names: Shooresh
 repository-code: "https://github.com/ShooreshS/Moving-Civic-Identity-Verification-to-the-Edge-data-and-code"
 url: "https://github.com/ShooreshS/Moving-Civic-Identity-Verification-to-the-Edge-data-and-code"
-abstract: "Aggregate experiment evidence, measurement methods, public devnet identifiers, measured artifact hashes, and limited source excerpts for Moving Civic Identity Verification to the Edge: A Privacy-Preserving Architecture for One-Person-One-Participation Digital Polling. Raw experimental records, artifact binaries, and a finalized multi-contributor setup are not included."
+abstract: "Aggregate experiment evidence, measurement methods, public devnet identifiers, measured artifact hashes, source-derived implementation pseudocode, and synthetic offline checks for Moving Civic Identity Verification to the Edge: A Privacy-Preserving Architecture for One-Person-One-Participation Digital Polling. The package supports inspection with stated limits; it does not reproduce the experiments or provide an independent security audit."
 keywords:
   - civic technology
   - mobile computing
   - zero-knowledge proofs
-  - reproducibility
+  - research evidence
   - Solana devnet
+references:
+  - type: software
+    title: "Moving-Civic-Identity-Verification-to-the-Edge-data-and-code"
+    authors:
+      - family-names: Sufiye
+        given-names: Shooresh
+    version: 1.0.0
+    doi: "10.5281/zenodo.23000023"
+    url: "https://zenodo.org/records/23000023"

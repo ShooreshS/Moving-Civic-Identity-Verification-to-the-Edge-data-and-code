@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "civicos-source-inspection-v1",
+  "inspectionDate": "2026-09-28",
+  "sourceFilesBundled": false,
+  "revisions": {
+    "backend": "392c779cc1122fa5f734520966a47e27b7495236",
+    "mobile": "19e813a834e00458c967098c8230f95a1468e21f"
+  },
+  "scope": "Source identification from author-side inspection of the recorded revisions. This is not an independent audit, proof execution, or binary-to-source attestation. Hashes identify source-file bytes; they do not validate runtime behavior or cryptographic security.",
+  "files": [
+    {
+      "alias": "vote-circuit",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 4272,
+      "sha256": "c5feae63e6462885a2b8951992d47f4b56094c193d06a56408ac98a5328df68f",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "public-signal-encoder",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 6994,
+      "sha256": "a081a6d943afed38627d7b50cfd508e30d82929fa95eab884982b3b0bcb87158",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "proof-acceptance",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 22500,
+      "sha256": "38ba7bcc57f66cdc02b082dc78b8e5070a217b4b6b33db38183ae8194d2052c2",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "vote-acceptance",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 49082,
+      "sha256": "e00845cc2d38c88be1a070ad369cc495601e3fd1a1957d36b836836e5a729cbc",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "credential-registry",
+      "repository": "backend",
+      "revision": "392c779cc1122fa5f734520966a47e27b7495236",
+      "bytes": 13253,
+      "sha256": "31a7b90119cbc0af92d116785e2128fd398d2bbef843c789de002d1cdeb74252",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-proof-builder",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 25715,
+      "sha256": "a632b9f6ce0dbd392faf0c40ef725ed70fa5f625a02e1911ca56ec2ec58b1752",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-proof-runtime",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 5925,
+      "sha256": "4e0045c914b22b07d580911247614b0a96d2c5bb3ecddaa3269c2d45d8377dd9",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-field-encoding",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 6080,
+      "sha256": "c6a5e9648b3eecc3ece92844e499af6cddd453ab1e975023fc35f567621bb08d",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-secret-lifecycle",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 12890,
+      "sha256": "b9f9399e41b07fd6aaef33604735bb7ee2feb5987b890ebb33ddc51961b4ffd6",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-identity-derivation",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 1393,
+      "sha256": "3ccffe9f3ba325b0d9d658ab441569e8e721c8df02f7fffe4154036925c151c1",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-identity-digest",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 474,
+      "sha256": "2b55686bc8c851fc961f0fab5b665d63109858d3c351dce69520868c6f03aad3",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-evidence-builder",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 6640,
+      "sha256": "2cd7046f17317860c6d066867ed0c68963fb9f98ba5489c0444e8f001b364e50",
+      "workingTreeMatch": false,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-identity-confirmation",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 8104,
+      "sha256": "e83403cea8aaf0f949245656f12b1ac9d1f1093a2e58210b0425965c6c2c5cf7",
+      "workingTreeMatch": false,
+      "kind": "implementation"
+    },
+    {
+      "alias": "client-face-comparison",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 19738,
+      "sha256": "d0ac29caeda572c0be66a4906c8adbf60d493427552e81a719f314a7958a11a8",
+      "workingTreeMatch": false,
+      "kind": "implementation"
+    },
+    {
+      "alias": "native-ios-prover",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 27749,
+      "sha256": "1cc86b500e4dab06992f10f3ee47e4914cd68340e0526a089e2e745044f3699d",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    },
+    {
+      "alias": "native-android-prover",
+      "repository": "mobile",
+      "revision": "19e813a834e00458c967098c8230f95a1468e21f",
+      "bytes": 25179,
+      "sha256": "4b6f3cf898bd3bccfc6e9d756e0f62316ebd8b612397f8f62d11a91671cc9fe8",
+      "workingTreeMatch": true,
+      "kind": "implementation"
+    }
+  ]
+}

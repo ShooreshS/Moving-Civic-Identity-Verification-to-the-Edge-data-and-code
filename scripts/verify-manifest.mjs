@@ -24,7 +24,7 @@ function excluded(relative) {
     || relative.split("/").some((part) => ignoredNames.has(part));
 }
 
-function sensitiveName(relative) {
+export function sensitiveName(relative) {
   return relative.split("/").some((part) => {
     const name = part.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
     return name.startsWith(".env") || /(^|[._ -])env($|[._ -])/.test(name)

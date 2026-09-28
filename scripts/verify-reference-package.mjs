@@ -18,6 +18,17 @@ const evidence = readJson("evidence/evidence-summary.json");
 const devnet = readJson("evidence/devnet-transactions.json");
 const artifacts = readJson("evidence/measured-artifacts.json");
 
+// Freeze the historical observations. Supplementary inspection evidence is separate.
+const baselineEvidenceHashes = {
+  "evidence/evidence-summary.json": "e8abd06e557b2bc801711c24ad1ad8a2abd85130c89c567bec7522c240f86c11",
+  "evidence/devnet-transactions.json": "51ae20daf6e06fbebcc753e72b0d79cf290c2c3e8ffaf511689521857ff1fc5e",
+  "evidence/measured-artifacts.json": "2a2917a283745266b81192e80da697b3f73bb9432ed6e54af230b58521a2e5c5",
+};
+for (const [path, expected] of Object.entries(baselineEvidenceHashes)) {
+  const actual = createHash("sha256").update(readFileSync(resolve(root, path))).digest("hex");
+  assert(actual === expected, `Historical evidence changed: ${path}.`);
+}
+
 assert(evidence.schemaVersion === "civicos-public-article-evidence-v1", "Unexpected evidence schema.");
 assert(evidence.primaryMobileCohort.completed === 50, "Primary mobile cohort must contain 50 completed trials.");
 assert(evidence.primaryMobileCohort.attempted === 50, "Primary mobile attempt count mismatch.");
@@ -125,6 +136,51 @@ scan(evidence);
 scan(devnet);
 scan(artifacts);
 
+let sourceEntryCount = 0;
+const inventories = {};
+for (const section of ["admission", "proof", "ballot"]) {
+  const inventory = readJson(`evidence/${section}-source-inventory.json`);
+  inventories[section] = inventory;
+  assert(inventory.schemaVersion === "civicos-source-inspection-v1", "Unexpected source inventory schema.");
+  assert(inventory.inspectionDate === "2026-09-28", "Unexpected source inspection date.");
+  assert(inventory.sourceFilesBundled === false, "Absent source files must not be described as bundled.");
+  assert(typeof inventory.scope === "string" && inventory.scope.length > 0, "Source inventory scope missing.");
+  assert(inventory.revisions.backend.startsWith(evidence.software.evidenceBackendRevision), "Backend source revision disagrees with measurement provenance.");
+  const aliases = new Set();
+  assert(Array.isArray(inventory.files) && inventory.files.length > 0, "Source inventory is empty.");
+  for (const entry of inventory.files) {
+    assert(/^[A-Za-z0-9_-]+$/.test(entry.alias) && !aliases.has(entry.alias), "Invalid or repeated component alias.");
+    aliases.add(entry.alias);
+    assert(["backend", "mobile"].includes(entry.repository), "Unexpected source repository alias.");
+    assert(/^[a-f0-9]{40}$/.test(entry.revision) && entry.revision === inventory.revisions[entry.repository], "Source revision mismatch.");
+    if (entry.repository === "mobile") assert(entry.revision === evidence.software.experimentMobileCommit, "Mobile source revision mismatch.");
+    assert(/^[a-f0-9]{64}$/.test(entry.sha256), "Invalid source SHA-256.");
+    assert(Number.isSafeInteger(entry.bytes) && entry.bytes > 0, "Invalid source byte length.");
+    assert(typeof entry.workingTreeMatch === "boolean", "Source alignment result missing.");
+    assert(["implementation", "test"].includes(entry.kind), "Unexpected source kind.");
+    assert(!("path" in entry) && !("sourcePath" in entry), "Source inventories must use public component aliases.");
+    sourceEntryCount++;
+  }
+  scan(inventory);
+}
+
+const inspection = readJson("evidence/inspection-checks.json");
+assert(inspection.schemaVersion === "civicos-inspection-checks-v1" && inspection.inspectionDate === "2026-09-28", "Unexpected supplement inspection record.");
+assert(inspection.independentAudit === false && inspection.historicalExperimentalResultsChanged === false, "Supplement evidence scope mismatch.");
+const privateTests = inspection.privateImplementationTests;
+assert(privateTests.passed === 3 && privateTests.failed === 0 && privateTests.expectCalls === 5 && privateTests.exitCode === 0, "Recorded synthetic helper-suite result mismatch.");
+assert(privateTests.sourceAndSuiteBundled === false && privateTests.fullOutputBundled === false, "Absent private test material must remain labeled absent.");
+assert(inventories.admission.files.some((entry) => entry.alias === privateTests.suiteAlias && entry.kind === "test" && entry.workingTreeMatch), "Executed private helper suite is missing from source provenance.");
+scan(inspection);
+
+const metadata = readJson("package.json");
+const citation = readFileSync(resolve(root, "CITATION.cff"), "utf8");
+assert(metadata.version === "1.1.0-dev", "Working supplement must remain distinguished from archived v1.0.0.");
+assert(/^cff-version: 1\.2\.0$/m.test(citation) && /^version: 1\.1\.0-dev$/m.test(citation), "Citation format or package version mismatch.");
+assert(!/^doi:/m.test(citation), "Unarchived supplement must not claim the baseline's DOI as its own.");
+assert(/^    doi: "10\.5281\/zenodo\.23000023"$/m.test(citation), "Archived baseline reference missing from citation metadata.");
+
 console.log(`Package integrity passed: ${integrity.fileCount} files match MANIFEST.sha256.`);
 console.log("Evidence-summary consistency passed: recorded cohort, proof, poll, transaction, payload, and artifact metadata agree.");
+console.log(`Historical evidence is byte-identical; ${sourceEntryCount} source inventory entries have consistent metadata. Private source hashes were not recomputed by this command.`);
 console.log("No experiments, proof replay, ceremony verification, or live network checks were run.");

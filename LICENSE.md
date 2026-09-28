@@ -4,7 +4,7 @@ The released code and the research material have different licenses:
 
 | Material in this repository | License |
 | --- | --- |
-| Scripts and tests in `scripts/`, JavaScript/TypeScript measurement excerpts in `source-snippets/`, `package.json`, and `.gitignore` | [MIT](LICENSE) |
+| Scripts and tests in `scripts/`, executable examples in `review-models/`, JavaScript/TypeScript measurement excerpts in `source-snippets/`, `package.json`, and `.gitignore` | [MIT](LICENSE) |
 | Markdown documentation, JSON evidence in `evidence/`, `CITATION.cff`, and the checksum manifest | [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode.en) |
 
 The MIT license permits reuse and modification of the code subject to preservation of its copyright and license notices. CC BY 4.0 permits sharing and adaptation of the research material with appropriate attribution, a license link, and an indication of changes. Both permit commercial use. The linked license terms govern; this description does not replace them.

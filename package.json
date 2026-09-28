@@ -1,11 +1,12 @@
 {
   "name": "civicos-article-reference-package",
-  "version": "1.0.0",
+  "version": "1.1.0-dev",
   "license": "(MIT AND CC-BY-4.0)",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test scripts/verify-manifest.test.mjs scripts/public-examples.test.mjs && node scripts/verify-reference-package.mjs"
+    "test": "node --test scripts/verify-manifest.test.mjs scripts/public-examples.test.mjs scripts/review-models.test.mjs scripts/check-publication-boundary.test.mjs && node scripts/verify-reference-package.mjs && node scripts/check-publication-boundary.mjs",
+    "check:publication": "node scripts/check-publication-boundary.mjs"
   },
   "engines": {
     "node": ">=20"
